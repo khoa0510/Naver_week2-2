@@ -1,5 +1,6 @@
 package com.example.naver_week22.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,6 +26,7 @@ public class Employee {
     @Column(name = "gender")
     private String gender;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "departmentId")
     private Department department;
 }

@@ -4,6 +4,7 @@ import com.example.naver_week22.Entity.Department;
 import com.example.naver_week22.Entity.Employee;
 import com.example.naver_week22.Service.DepartmentService;
 import com.example.naver_week22.Service.EmployeeService;
+import com.example.naver_week22.dto.DepartmentWithEmployeeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,7 +46,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/{departmentId}/employee")
-    public ResponseEntity<Department> getDepartmentWithEmployee(@PathVariable("departmentId") Long departmentId) {
+    public ResponseEntity<DepartmentWithEmployeeDTO> getDepartmentWithEmployee(@PathVariable("departmentId") Long departmentId) {
         return ResponseEntity.ok(departmentService.getDepartmentWithEmployee(departmentId));
     }
 
