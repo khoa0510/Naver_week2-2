@@ -37,10 +37,6 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     public DepartmentWithEmployeeDTO getDepartmentWithEmployee(Long departmentId) {
-        //Department department = departmentRepositoryMyBatis.findByDepartmentId(departmentId);
-        //Long count = departmentRepositoryMyBatis.count(departmentId);
-        //DepartmentWithEmployeeDTO departmentDTO = modelMapper.map(department, DepartmentWithEmployeeDTO.class);
-        //departmentDTO.setCount(count);
         return departmentRepositoryMyBatis.findByDepartmentId(departmentId);
     }
 

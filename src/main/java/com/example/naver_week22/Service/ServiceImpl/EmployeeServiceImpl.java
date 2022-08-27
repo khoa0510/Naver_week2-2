@@ -42,10 +42,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public EmployeeWithDepartmentDTO getEmployeeWithDepartment(Long employeeId) {
-        //Employee employee = employeeRepositoryMyBatis.findByEmployeeId(employeeId);
-        //Department department = departmentRepositoryMyBatis.findByDepartmentId(employee.getDepartment().getDepartmentId());
-        //EmployeeWithDepartmentDTO employeeDTO = mapper.map(employee, EmployeeWithDepartmentDTO.class);
-        //mapper.map(department, employeeDTO);
         return employeeRepositoryMyBatis.findByEmployeeId(employeeId);
     }
 
